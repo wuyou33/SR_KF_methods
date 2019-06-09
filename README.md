@@ -1,9 +1,10 @@
-# Factored-form Kalman filter methods
+# Factored-form (square-root) Kalman filter methods
  
 This repository contains MATLAB functions for various Kalman filter (KF) implementation methods. Most of them are given in square-root (SR) form. Additionally, a posteriori form is given together with a priori form. Both the classical Riccati and the Chandrasekhar recursions-based methods are implemented.  
 
 # Steps to reproduce
 -- "Test_KFs": script that performs Monte Carlo runs for solving filtering problem by various KF implementations both for the a priori and a posteriori estimation. 
+
 -- "Illustrate_XP": script that illustrates the obtained estimates and the diagonal entries of the error covariance matrix (over time). You can find its call at the end of the script above, which is commented. Just delete this comment sign.
 
 Remark. When the state is estimated, the resulted errors should be the same for all implementation methods because they are mathematically equivalent to each other. Their numerical properties differ with respect to round off error, but the ill-conditioned example is not given here. 

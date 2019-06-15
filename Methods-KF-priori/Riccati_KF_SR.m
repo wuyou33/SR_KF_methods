@@ -48,7 +48,7 @@ hatX(:,1) = X; hatDP(:,1) = diag(P); % save initials at the first entry
         Rek_sqrt  = PostArray(1:m,1:m);
          bar_K_pk = PostArray(1:m,m+1:m+n)';      
            P_sqrt = PostArray(m+1:m+n,1+m:m+n);      
-                X = F*X + bar_K_pk/Rek_sqrt*ek;    
+                X = F*X + bar_K_pk/Rek_sqrt'*ek;    
         
     neg_LLF = neg_LLF+log(det(Rek_sqrt))+1/2*ek'/Rek_sqrt'/Rek_sqrt*ek; 
     hatX(:,k+1) = X; hatDP(:,k+1) = diag(P_sqrt'*P_sqrt); 
